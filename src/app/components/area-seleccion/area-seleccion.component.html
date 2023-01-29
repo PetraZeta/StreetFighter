@@ -1,0 +1,28 @@
+
+<div class="row">
+
+  <!--  <retrato-luchador *ngFor="let jugador of jugadores; let i =index " class="retrato-jugador col-md-6"  >
+
+
+    </retrato-luchador> -->
+   <mat-button-toggle-group
+        *ngFor="let jugador of jugadores; let i =index "
+
+    class="retrato-jugador col-md-6"
+    (mouseover)="activarLuchador(i)"
+    [style.backgroundColor]=" indiceSeleccionado ===i ? jugador.colorAsociado: 'transparent' ">
+<mat-button-toggle
+
+[class.active]=""
+        class="btn "
+        type="button"
+        value="color"
+    >
+  <img (click)="mostrarJugador(i)"
+  [ngClass]=""
+   [src]="jugador.retrato"  />
+  </mat-button-toggle>
+
+  </mat-button-toggle-group>
+
+

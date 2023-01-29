@@ -1,0 +1,10 @@
+.retrato-jugador img{
+  border-radius: 2px;
+border-width: 50px;
+width: 170px;
+height: 170px;
+}
+button{
+  padding: 0px;
+  width: 120% ;
+}
