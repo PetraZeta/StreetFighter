@@ -11,17 +11,12 @@ import { CargaJugadorService } from 'src/app/servicios/carga-jugador.service';
 export class AreaSeleccionComponent implements OnInit{
    jugadores: IJugador[]=[];
   indiceSeleccionado = -1;
-  numLuchador = -1;
-
-
+  
   activarLuchador(indice: number) {
     this.indiceSeleccionado = indice;
     console.log(this.indiceSeleccionado);
-
-   /*  console.log('activarJugador')
-    console.log(this.jugadores[indice].colorAsociado);
-    return true; */
 }
+
   constructor(private cargaJugador: CargaJugadorService) {
 
   }

@@ -10,19 +10,15 @@ export class RetratoLuchadorComponent implements OnInit {
   /* @Input indiceSeleccionado;
   @Input numLuchador
   @Output luchadorSeleccionado */
-  /*  @Input() jugador: IJugador; */
- /*  @Input () numLuchador: number; */
+  @Input() luchador: IJugador;
+  @Input() numLuchador: number;
+  @Input() indiceSelec: number;
 
 
-
- /*  jugadores: IJugador[]=[]; */
-
-
-/*   retrato: string; */
-  constructor(/* private cargaJugador: CargaJugadorService */) {
+  constructor() {
 
   }
   ngOnInit(): void {
-     /*  this.jugador = this.cargaJugador.getJugadores(); */
+    
   }
 }

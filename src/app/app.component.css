@@ -10,15 +10,13 @@
    h1 {
 
     font-size: 50px;
-    padding: 26px auto;
-
+    margin: 100px auto;
     color: #7962E4;
 
 
   }
 
   .area-seleccion {
-
     background-color: #7962E4;
     margin-top: 216px;
     border-radius: 24px;

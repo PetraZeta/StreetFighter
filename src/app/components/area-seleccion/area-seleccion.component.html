@@ -1,28 +1,49 @@
 
-<div class="row">
+
 
   <!--  <retrato-luchador *ngFor="let jugador of jugadores; let i =index " class="retrato-jugador col-md-6"  >
 
 
     </retrato-luchador> -->
-   <mat-button-toggle-group
+  <div class=" col-md-4">
+
+    <retrato-luchador
         *ngFor="let jugador of jugadores; let i =index "
+        class="retrato-jugador col-md-6"
+        (mouseover)="activarLuchador(i)"
+        [indiceSelec]="indiceSeleccionado"
+        [luchador]="jugador"
+        [numLuchador]="i">
+    </retrato-luchador>
+</div>
 
-    class="retrato-jugador col-md-6"
-    (mouseover)="activarLuchador(i)"
-    [style.backgroundColor]=" indiceSeleccionado ===i ? jugador.colorAsociado: 'transparent' ">
-<mat-button-toggle
+<div class="col-md-4"  *ngIf="indiceSeleccionado !== -1">
 
-[class.active]=""
-        class="btn "
-        type="button"
-        value="color"
-    >
-  <img (click)="mostrarJugador(i)"
-  [ngClass]=""
-   [src]="jugador.retrato"  />
-  </mat-button-toggle>
+<img   [src]="jugadores[indiceSeleccionado].animacion" width="80%" alt="">
+</div>
 
-  </mat-button-toggle-group>
+<div class="col-md-4"  *ngIf="indiceSeleccionado !== -1">
 
+  <h1>{{jugadores[indiceSeleccionado].nombre}} </h1>
+
+    <progress-bar
+  [fuerza]="jugadores[indiceSeleccionado].fuerza | barraAtributos"
+
+  [destreza]="jugadores[indiceSeleccionado].destreza | barraAtributos"
+  [vida]="jugadores[indiceSeleccionado].vida | barraAtributos"
+  >
+  </progress-bar>
+<!--   <progress-bar
+  [destreza]="jugadores[indiceSeleccionado].destreza | barraAtributos"
+  >
+  </progress-bar>
+
+  <progress-bar
+  [vida]="jugadores[indiceSeleccionado].vida | barraAtributos"
+  >
+  </progress-bar> -->
+
+
+
+</div>
 

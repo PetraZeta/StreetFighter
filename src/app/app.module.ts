@@ -10,17 +10,22 @@ import { AreaSeleccionComponent } from './components/area-seleccion/area-selecci
 import { RetratoLuchadorComponent } from './components/retrato-luchador/retrato-luchador.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+import { ProgressBarComponent } from './components/progress-bar/progress-bar.component';
+import { BarraAtributosPipe } from './pipes/barra-atributos.pipe';
 @NgModule({
   declarations: [
     AppComponent,
     AreaSeleccionComponent,
-    RetratoLuchadorComponent
+    RetratoLuchadorComponent,
+    ProgressBarComponent,
+    BarraAtributosPipe
   ],
   imports: [
     BrowserModule,
     NgbModule,
     BrowserAnimationsModule,
-    MatButtonToggleModule
+    MatButtonToggleModule,
+
   ],
   providers: [CargaJugadorService],
   bootstrap: [AppComponent]
